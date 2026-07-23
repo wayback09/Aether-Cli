@@ -1,0 +1,12 @@
+{
+  "id": "com.example.test",
+  "name": "my-test-extension",
+  "version": "1.0.0",
+  "author": "Author",
+  "description": "A new Aether extension.",
+  "main": "main.js",
+  "api": "1.0",
+  "permissions": [
+    "ui:sidebar"
+  ]
+}
