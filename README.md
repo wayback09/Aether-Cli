@@ -1,6 +1,10 @@
 # Aether CLI
 
+> **⚠️ Work In Progress** — This tool is not yet publicly released. The API is subject to change.
+
 The `aether` CLI is the official developer toolkit for creating, building, and packaging extensions for the Aether Minecraft Launcher. It allows developers to quickly scaffold new projects and package them securely into `.aex` format.
+
+> This repository is currently private while the CLI is being finalized. It will be made public and available for download once it reaches a stable release.
 
 ## Commands
 
