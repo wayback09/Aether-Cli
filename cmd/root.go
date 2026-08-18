@@ -7,7 +7,7 @@ import (
 func PrintHelp() {
 	fmt.Println("Aether CLI - Developer toolkit for Aether extensions")
 	fmt.Println("\nUsage:")
-	fmt.Println("  aether [command]")
+	fmt.Println("  aether-cli [command]")
 	fmt.Println("\nAvailable Commands:")
 	fmt.Println("  init        Scaffolds a new Aether extension project")
 	fmt.Println("  validate    Validates the manifest.json of an extension")

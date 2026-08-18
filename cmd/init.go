@@ -9,7 +9,7 @@ import (
 
 func RunInit(args []string) error {
 	if len(args) < 2 {
-		return fmt.Errorf("usage: aether init <extension-name> <extension-id>")
+		return fmt.Errorf("usage: aether-cli init <extension-name> <extension-id>")
 	}
 
 	name := args[0]
@@ -34,6 +34,6 @@ func RunInit(args []string) error {
 	}
 
 	fmt.Println("✅ Initialization complete!")
-	fmt.Printf("cd %s && aether build\n", name)
+	fmt.Printf("cd %s && aether-cli build\n", name)
 	return nil
 }

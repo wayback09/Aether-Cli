@@ -1,6 +1,6 @@
 # Aether CLI
 
-The `aether` CLI is the official developer toolkit for creating, building, and packaging extensions for the Aether Minecraft Launcher. It allows developers to quickly scaffold new projects and package them securely into `.aex` format.
+The `aether-cli` is the official developer toolkit for creating, building, and packaging extensions for the Aether Minecraft Launcher. It allows developers to quickly scaffold new projects and package them securely into `.aex` format.
 
 
 ## Installation
@@ -11,27 +11,13 @@ Install the CLI with Go:
 go install github.com/wayback09/aether-cli@latest
 ```
 
-Go installs the binary as `aether-cli` (named after the module). To use the `aether` command shown throughout this README, rename it and make sure your Go bin directory is on `PATH`:
-
-```bash
-# macOS / Linux
-mv ~/go/bin/aether-cli ~/go/bin/aether
-export PATH="$PATH:$(go env GOPATH)/bin"   # add to ~/.zshrc or ~/.bashrc
-
-# Windows (PowerShell)
-ren "$env:USERPROFILE\go\bin\aether-cli.exe" aether.exe
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";$env:USERPROFILE\go\bin", "User")
-```
-
-Then open a new terminal and run `aether help`.
-
-> **Note:** If you run `go install` again, the `aether-cli` binary will be recreated — re-apply the rename (or skip it and call the CLI as `aether-cli`).
+The binary is installed as `aether-cli` (named after the module). Make sure your Go bin directory is on `PATH` (`$(go env GOPATH)/bin` on macOS/Linux, `%USERPROFILE%\go\bin` on Windows), then open a new terminal and run `aether-cli help`.
 
 ## Commands
 
-- `aether init <name> <id>`: Scaffolds a new Aether extension with a `manifest.json`, `main.js`, and `ui/index.html` frontend. Automatically integrates the `@aethermc/sdk`.
-- `aether validate`: Parses the `manifest.json` in the current directory and checks for missing required fields (`id`, `name`, `version`, `main`, `api`) to ensure compatibility.
-- `aether build`: Validates the extension and then securely packages it into an Aether `.aex` archive while stripping out development files like `.git` and `node_modules`.
+- `aether-cli init <name> <id>`: Scaffolds a new Aether extension with a `manifest.json`, `main.js`, and `ui/index.html` frontend. Automatically integrates the `@aethermc/sdk`.
+- `aether-cli validate`: Parses the `manifest.json` in the current directory and checks for missing required fields (`id`, `name`, `version`, `main`, `api`) to ensure compatibility.
+- `aether-cli build`: Validates the extension and then securely packages it into an Aether `.aex` archive while stripping out development files like `.git` and `node_modules`.
 
 ## Development
 
@@ -39,10 +25,10 @@ The CLI is written in Go and uses standard libraries to keep the binary small an
 
 ```bash
 # Build the CLI
-go build -o aether.exe
+go build -o aether-cli.exe
 
 # Run the CLI
-./aether.exe help
+./aether-cli.exe help
 ```
 
 ## License
