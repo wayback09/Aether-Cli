@@ -11,7 +11,21 @@ Install the CLI with Go:
 go install github.com/wayback09/aether-cli@latest
 ```
 
-Make sure your Go bin directory is on `PATH`, then run `aether help`.
+Go installs the binary as `aether-cli` (named after the module). To use the `aether` command shown throughout this README, rename it and make sure your Go bin directory is on `PATH`:
+
+```bash
+# macOS / Linux
+mv ~/go/bin/aether-cli ~/go/bin/aether
+export PATH="$PATH:$(go env GOPATH)/bin"   # add to ~/.zshrc or ~/.bashrc
+
+# Windows (PowerShell)
+ren "$env:USERPROFILE\go\bin\aether-cli.exe" aether.exe
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";$env:USERPROFILE\go\bin", "User")
+```
+
+Then open a new terminal and run `aether help`.
+
+> **Note:** If you run `go install` again, the `aether-cli` binary will be recreated — re-apply the rename (or skip it and call the CLI as `aether-cli`).
 
 ## Commands
 
