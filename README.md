@@ -30,3 +30,7 @@ go build -o aether.exe
 # Run the CLI
 ./aether.exe help
 ```
+
+## License
+
+Licensed under the GNU General Public License v3.0 only. See [LICENSE](LICENSE).
