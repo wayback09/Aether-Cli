@@ -69,7 +69,7 @@ Aether.ui.registerSidebarPage({
   "name": "` + id + `",
   "version": "1.0.0",
   "dependencies": {
-    "@aether/sdk": "latest"
+    "@aethermc/sdk": "latest"
   }
 }
 `
