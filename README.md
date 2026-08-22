@@ -1,5 +1,11 @@
 # Aether CLI
 
+<p align="center">
+  <a href="https://discord.gg/pQc9NnGhpG">
+    <img src="https://img.shields.io/discord/1276219898393333761?label=Join%20our%20Discord&logo=discord&logoColor=white&color=5865F2&style=for-the-badge" alt="Discord">
+  </a>
+</p>
+
 The `aether-cli` is the official developer toolkit for creating, building, and packaging extensions for the Aether Minecraft Launcher. It allows developers to quickly scaffold new projects and package them securely into `.aex` format.
 
 
