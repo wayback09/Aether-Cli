@@ -5,13 +5,13 @@ import (
 )
 
 func PrintHelp() {
-	fmt.Println("Aether CLI - Developer toolkit for Aether extensions")
+	fmt.Println("Aether CLI - Developer toolkit for Aether extensions and themes")
 	fmt.Println("\nUsage:")
 	fmt.Println("  aether-cli [command]")
 	fmt.Println("\nAvailable Commands:")
-	fmt.Println("  init        Scaffolds a new Aether extension project")
-	fmt.Println("  validate    Validates the manifest.json of an extension")
-	fmt.Println("  build       Builds and packages the extension into an .aex file")
+	fmt.Println("  init        Scaffolds a new Aether extension or theme (--theme)")
+	fmt.Println("  validate    Validates the manifest.json of an extension or package.json of a theme")
+	fmt.Println("  build       Builds and packages the extension/theme (.aex / .theme)")
 }
 
 func Execute(command string, args []string) error {

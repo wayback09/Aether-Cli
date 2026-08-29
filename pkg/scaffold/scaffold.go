@@ -80,3 +80,61 @@ Aether.ui.registerSidebarPage({
 	fmt.Printf("Successfully scaffolded extension: %s\n", name)
 	return nil
 }
+
+func CreateTheme(dirPath string, name string, id string) error {
+	// Create package.json for theme
+	pkgJson := `{
+  "id": "` + id + `",
+  "name": "` + name + `",
+  "version": "1.0.0",
+  "author": "Author",
+  "description": "A new Aether theme.",
+  "css": "theme.css",
+  "overwrite": "overwrite.json"
+}
+`
+	if err := os.WriteFile(filepath.Join(dirPath, "package.json"), []byte(pkgJson), 0644); err != nil {
+		return err
+	}
+
+	// Create theme.css
+	themeCss := `/* theme.css */
+:root {
+  --bg-color: #0a0a12;
+  --sidebar-bg: #10101c;
+  --panel-bg: #16162a;
+
+  --accent-color: #7c3aed;
+  --accent-hover: #6d28d9;
+
+  --border-radius: 10px;
+}
+`
+	if err := os.WriteFile(filepath.Join(dirPath, "theme.css"), []byte(themeCss), 0644); err != nil {
+		return err
+	}
+
+	// Create overwrite.json
+	overwriteJson := `{}`
+	if err := os.WriteFile(filepath.Join(dirPath, "overwrite.json"), []byte(overwriteJson), 0644); err != nil {
+		return err
+	}
+
+	// Create README.md
+	readmeMd := `# ` + name + ` Theme
+
+A new Aether launcher appearance pack.
+
+## Installation
+Build the theme package using the Aether CLI:
+` + "```bash\n" + `aether-cli build --theme
+` + "```\n" + `
+Then install the produced ` + "`.theme`" + ` file in **Settings → Appearance** inside the Aether Launcher.
+`
+	if err := os.WriteFile(filepath.Join(dirPath, "README.md"), []byte(readmeMd), 0644); err != nil {
+		return err
+	}
+
+	fmt.Printf("Successfully scaffolded theme: %s\n", name)
+	return nil
+}
