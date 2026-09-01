@@ -6,7 +6,7 @@
   </a>
 </p>
 
-The `aether-cli` is the official developer toolkit for creating, building, and packaging **extensions** and **themes** for the Aether Minecraft Launcher. It lets developers scaffold new projects and package them securely into `.aex` (extension) or `.theme` (appearance pack) format.
+The `aether-cli` is the official developer toolkit for creating, building, and packaging **extensions** and **themes** for the [Aether Minecraft Launcher](https://github.com/Aether-Launcher/Aether). It lets developers scaffold new projects and package them securely into `.aex` (extension) or `.theme` (appearance pack) format.
 
 ---
 
@@ -15,7 +15,7 @@ The `aether-cli` is the official developer toolkit for creating, building, and p
 Install the CLI with Go:
 
 ```bash
-go install github.com/wayback09/aether-cli@latest
+go install github.com/Aether-Launcher/aether-cli@latest
 ```
 
 The binary is installed as `aether-cli`. Make sure your Go bin directory is on `PATH` (`$(go env GOPATH)/bin` on macOS/Linux, `%USERPROFILE%\go\bin` on Windows), then open a new terminal and run:
@@ -120,6 +120,7 @@ aether-cli -h
 ```bash
 aether-cli init my-extension com.example.myextension
 cd my-extension
+npm install   # installs @aethermc/sdk for TypeScript types
 aether-cli validate
 aether-cli build
 # → com.example.myextension-1.0.0.aex
@@ -135,6 +136,24 @@ aether-cli validate
 aether-cli build
 # → com.example.mytheme-1.0.0.theme
 ```
+
+---
+
+## Extension SDK
+
+The scaffolded extension includes a dependency on [`@aethermc/sdk`](https://www.npmjs.com/package/@aethermc/sdk) — the official TypeScript SDK for Aether extensions. It provides full type definitions for the `Aether` global API and helper utilities:
+
+```bash
+npm install --save-dev @aethermc/sdk
+```
+
+See the [Aether SDK repository](https://github.com/Aether-Launcher/Aether-SDK) for full documentation.
+
+---
+
+## Publishing Your Extension
+
+Once built, submit your `.aex` to the [Aether Extension Registry](https://github.com/Aether-Launcher/Aether-Extensions) by opening a Pull Request. All extensions must comply with the [Aether Extension API License](https://github.com/Aether-Launcher/Aether-SDK/blob/main/LICENSE) — closed-source extensions are allowed, subject to Aether review.
 
 ---
 
