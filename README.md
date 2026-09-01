@@ -153,7 +153,7 @@ See the [Aether SDK repository](https://github.com/Aether-Launcher/Aether-SDK) f
 
 ## Publishing Your Extension
 
-Once built, submit your `.aex` to the [Aether Extension Registry](https://github.com/Aether-Launcher/Aether-Extensions) by opening a Pull Request. All extensions must comply with the [Aether Extension API License](https://github.com/Aether-Launcher/Aether-SDK/blob/main/LICENSE) — closed-source extensions are allowed, subject to Aether review.
+Once built, submit your `.aex` file alongside an entry in `index.json` to the [Aether Extension Registry](https://github.com/Aether-Launcher/Aether-Extensions) by opening a Pull Request. All extensions must comply with the [Aether Extension API License](https://github.com/Aether-Launcher/Aether-SDK/blob/main/LICENSE) — closed-source extensions are allowed, subject to Aether review.
 
 ---
 
